@@ -2,7 +2,7 @@
 /*
 Plugin Name: Network Annotator
 Plugin URI: http://www.princeton.edu
-Description:
+Description: The Network Annotator plugin includes the [anno] (and [annotation]) shortcode.  When added to a page, this inserts a link that allows frontend users to create links between posts.
 Version: 1.0
 Author: Ben Johnston
 Author URI: http://www.princeton.edu
