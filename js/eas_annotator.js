@@ -21,14 +21,26 @@ function t(para_id) {
 jQuery( document ).ready(function() {
 
 
-    jQuery('.preview').hover( function(){
+    jQuery('.preview').mouseover( function(e){
+      e.stopPropagation();
       var target = jQuery(this).attr('rel');
       jQuery('#'+target).show();
     });
-  
-    jQuery('.preview').mouseout( function(){
+    jQuery('.preview').mouseout( function(e){
+      e.stopPropagation();
       var target = jQuery(this).attr('rel');
       jQuery('#'+target).hide();
+    });  
+
+
+    jQuery('.postpreview').mouseover( function(e){
+      e.stopPropagation();
+      jQuery(this).show();
+    });
+  
+    jQuery('.postpreview').mouseout( function(e){
+      e.stopPropagation();
+      jQuery(this).hide();
     });
 
 });

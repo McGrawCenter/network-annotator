@@ -46,6 +46,28 @@ add_shortcode("annotate", "eas_annotator_shortcode");
 
 
 
+/* ***************************************************** 
+  template tag for inserting incoming links
+****************************************************** */
+
+function annotation_links() {
+  echo "THESE WILL BE THE INCOMING LINKS";
+}
+
+function insert_annotation_links($content) {
+
+  $linkshtml = "<div class='incoming_links'>Linked to from:<br />";
+  $linkshtml .= "<a href='#'>Post title</a><br />";
+  $linkshtml .= "<a href='#'>Post title</a><br />";
+  $linkshtml .= "</div>";
+  return $content.$linkshtml;
+
+
+}
+
+
+add_filter( 'the_content', 'insert_annotation_links' );
+
 
 /* ***************************************************** 
 
@@ -144,7 +166,7 @@ function annotate($anno_id) {
 		$returnStr .= "<br />";
 
 
-	       $preview = "<h4>".$p->post_title."</h4>".get_the_post_thumbnail( $p->ID, 'thumbnail',array('class' => 'alignleft') ).strip_tags(substr($p->post_content,0,240))."...";
+	       $preview = "<h4>".$p->post_title."</h4>".get_the_post_thumbnail( $p->ID, 'thumbnail',array('class' => 'alignleft') ).strip_tags(substr($p->post_content,0,240))."...<br /><a href='".get_permalink($p->ID)."'>Go</a>";
 	       $returnStr .= "<div class='postpreview' id='preview-".$anno_id."-".$cnt."'>".$preview."<br clear='all'/></div>";
 	       $cnt++; 
 	   } // end if
@@ -169,6 +191,7 @@ function annotate($anno_id) {
   $returnStr .= "    <div style='text-align:right;'><a href='#".$anno_id."'><img src='".plugins_url( 'images/permalink-icon.png' , __FILE__ )."'/><!--<input type='button' value='link here'/>--></a></div>\n";
   $returnStr .= "</div>\n";
   $returnStr .= "</div>\n";
+
 
   return $returnStr;
 

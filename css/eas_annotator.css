@@ -113,6 +113,7 @@ a.link_project:hover  {
 .eas_annotation_links {
   float:right;
   text-align:right;
+  position:relative;
 }
 
 .link_annotation {
@@ -177,6 +178,8 @@ a.link_project:hover  {
     position: absolute;
     width: 600px;
     z-index: 2;
-    right:-50px;
+    left:-450px;
 }
-
+.postpreview h4 {
+   margin: 5px 0 !important;
+}
