@@ -1,0 +1,182 @@
+.wp-caption {
+text-align: center;
+background-color: #f3f3f3;
+padding: 4px;
+margin: 10px;
+}
+.wp-caption img {
+margin: 0;
+padding: 0;
+border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+font-size: 11px;
+line-height: 17px;
+padding: 0 4px 5px;
+margin: 0;
+}
+
+
+
+/* Change content width */
+.site-content .entry-header,
+.site-content .entry-content,
+.site-content .entry-summary,
+.site-content .entry-meta, 
+.page-content {
+      max-width: 600px !important;
+}
+
+#annotate_wrap {
+  width:580px;
+  position: relative;
+}
+
+/*hide blog-like navigation at bottom of posts. If have time, might want to create a child theme that incorporates these changes*/
+.nav-links { display: none; }
+
+
+.eas_anno {
+
+}
+
+
+a.link_annotation {
+  text-decoration:none;
+}
+
+a.link_article {
+  text-decoration:none;
+}
+a.link_project {
+  text-decoration:none;
+}
+
+a.link_uncategorized {
+  text-decoration:none;
+}
+
+a.link_annotation:hover {
+  color:white;
+}
+a.link_article:hover  {
+  color:white;
+}
+a.link_project:hover  {
+  color:white;
+}
+
+
+/**** POPUPS *****/
+
+.info-window {
+  /*display:none;
+  background:white;
+  z-index:2;
+  padding:10px 20px 20px 20px;
+  right:50px;
+  width:360px;
+  position:absolute;
+  border:solid 1px grey;*/
+  text-align:left; 
+  background: white none repeat scroll 0 0;
+  border: 1px solid grey;
+  display: none;
+  padding: 10px 10px 10px 20px;
+  position: absolute;
+  width:420px;
+  z-index: 2;
+  right:-50px;
+}
+
+.info-window-head {
+  height:10px; 
+  text-align:right;
+}
+
+.info-window-head img {
+  float:right;
+}
+.info-window-body {
+ margin-bottom:20px;
+}
+
+.info-div {
+  float:right;
+  width:180px;
+}
+
+.eas_annotation_info_icon {
+
+}
+
+.eas_annotation_links {
+  float:right;
+  text-align:right;
+}
+
+.link_annotation {
+  font-size:80%;
+  padding:4px 8px;
+  background:darkred;
+  color:white;
+  text-decoration:none;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+
+.link_article {
+  font-size:80%;
+  padding:4px 8px;
+  background:steelblue;
+  color:white;
+  text-decoration:none;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+.link_project {
+  font-size:80%;
+  padding:4px 8px;
+  background:darkseagreen;
+  color:white;
+  text-decoration:none;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+.link_uncategorized {
+  font-size:80%;
+  padding:4px 8px;
+  background:#DDD;
+  color:white;
+  text-decoration:none;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+
+.link_annotation a:hover {
+  color:white;
+}
+
+.annotation_marker a {
+    padding:0px 4px;
+  background:orange;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  color:white;
+  text-decoration:none;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+
+.postpreview {
+   text-align:left;
+   background: white none repeat scroll 0 0;
+    border: 1px solid grey;
+    display: none;
+    padding: 10px 10px 10px 20px;
+    position: absolute;
+    width: 600px;
+    z-index: 2;
+    right:-50px;
+}
+
