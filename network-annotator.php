@@ -174,8 +174,10 @@ function annotate($anno_id) {
      } // foreach anno
     } // end if
   } // foreach post
-  $returnStr .= "<div class='annotation_marker'><a href=\"#\" id=\"{$anno_id}\" onClick=\"t('".$anno_id."'); return false;\">+</a></div>";
 
+  if(is_user_logged_in()) {
+    $returnStr .= "<div class='annotation_marker'><a href=\"#\" id=\"{$anno_id}\" onClick=\"t('".$anno_id."'); return false;\">+</a></div>";
+  }
   $returnStr .= "<div class='info-window' id='info-window-".$anno_id."'>";
   $returnStr .= "  <div class='info-window-head'><a href=\"javascript:t('".$anno_id."')\"><img src='".plugins_url( 'images/close-window-icon.png' , __FILE__ )."' /></a></div>\n";
   $returnStr .= "  <div class='info-window-body'>\n";
